@@ -5,7 +5,7 @@ name: Update China.mmdb
 on:
   push:
     branches:
-      - "master"
+      - "Her"
     paths-ignore:
       - "LICENSE"
       - "*.md"
@@ -22,9 +22,9 @@ jobs:
     - name: Get China.mmdb
       run: |
         cd $GITHUB_WORKSPACE
-        curl -LR -o https://raw.githubusercontent.com/XOS/China.mmdb/release/cn-ip-cidr.txt
-        curl -LR -o https://raw.githubusercontent.com/XOS/China.mmdb/release/China.list
-        curl -LR -o https://raw.githubusercontent.com/XOS/China.mmdb/release/China.mmdb
+        curl -L https://raw.githubusercontent.com/XOS/China.mmdb/release/cn-ip-cidr.txt
+        curl -L https://raw.githubusercontent.com/XOS/China.mmdb/release/China.list
+        curl -L https://raw.githubusercontent.com/XOS/China.mmdb/release/China.mmdb
     - name: Add & Commit
       uses: EndBug/add-and-commit@v4.4.0
       with:
